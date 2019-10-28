@@ -1,0 +1,50 @@
+Go
+
+Atribuição de variável:
+
+    var nome_da_variavel string = "Teste"
+
+    nome_da_variavel := "Teste" # Assim ele também já identifica que o tipo é string
+
+Pegar input do usuário:
+    var comando int
+
+    # Para especificar o que quer receber:
+        fmt.Scanf("%d", &comando)
+
+        %d = integer
+        %s = string
+        %f = float
+        %v = vector
+
+    # Para receber int, string, float, etc:
+        fmt.Scan(&comando)
+
+    # O & significa que ele está buscando um endereço
+
+Ifs:
+    O Go não aceita if comando {} somente, precisa ter uma expressão
+
+	if comando == 1{
+		fmt.Println("Iniciando monitoramento...")
+	} else if comando == 2{
+		fmt.Println("Mostrando histórico de logs")
+	} else if comando == 0 {
+		fmt.Println("Obrigado por utilizar nossos serviços")
+	} else {
+		fmt.Println("Favor escolher números de 0 a 2")
+	}
+
+Switch:
+    var teste string
+
+    switch teste {
+        case "oi":
+            fmt.Println("Olá")
+        case "tchau":
+            fmt.Println("Tchau Tchau..")
+        default:
+            fmt.Println("Você nõ disee oi nem tchau...")
+    } 
+
+    switch não precisa de break a cada case
