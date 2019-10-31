@@ -1,14 +1,21 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main(){
 
-	var lista []string
+	lista := []string{
+		"Carro",
+		"Moto",
+		"JetSki",
+		"Skate",
+	}
+	rand.Seed(time.Now().Unix())
+	fmt.Println(time.Now().Unix())
+	fmt.Println("Hoje vou ir ao trabalho de...", lista[rand.Intn(len(lista))])
 
-	lista = append(lista, "Carro")
-
-	fmt.Println(lista)
-
-	lista = append(lista, "Moto")
 }

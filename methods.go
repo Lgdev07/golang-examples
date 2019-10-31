@@ -38,7 +38,7 @@ func (family *Family) totalFamilyMoney() float64{
 	return family.father.cash + family.mother.cash
 }
 
-func (family *Family) desengage(loverino Lover) {
+func (family *Family) desengage(loverino *Lover) {
 	if loverino.humor == "bad"{
 		family.engaged = false
 	}
@@ -79,13 +79,13 @@ func main(){
 	fmt.Println("Podemos comprar um ticket? ", ticket)
 	fmt.Println("Temos o total de: ", totalMoney)
 
-	family1.desengage(lover1)
+	family1.desengage(&lover1)
 
 	fmt.Println("Lover with good humor, engaged? ", family1.engaged)
 
 	lover1.humor = "bad"
 	
-	family1.desengage(lover1)
+	family1.desengage(&lover1)
 	
 	fmt.Println("Lover with bad humor, engaged? ", family1.engaged)
 
