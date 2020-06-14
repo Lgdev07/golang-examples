@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 
 	// make é para criar um slice vazio
 
@@ -16,8 +16,6 @@ func main(){
 	fmt.Println(dict3)
 }
 
-
 // dict[key]: valor
-
 
 // map[tipo_da_key]tipo_do_valor

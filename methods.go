@@ -2,78 +2,78 @@ package main
 
 import "fmt"
 
-type Family struct{
-	father Father
-	mother Mother
+type Family struct {
+	father  Father
+	mother  Mother
 	engaged bool
 }
 
-type Father struct{
-	name string
-	age int
+//Father ddgdfg
+type Father struct {
+	name  string
+	age   int
 	humor string
-	cash float64
+	cash  float64
 }
 
-type Mother struct{
-	name string
-	age int
+type Mother struct {
+	name  string
+	age   int
 	humor string
-	cash float64
+	cash  float64
 }
 
-type Lover struct{
+type Lover struct {
 	humor string
 }
 
-func (family *Family) canBuyAShowTicket() bool{
-	if family.father.cash + family.mother.cash < 15000{
+func (family *Family) canBuyAShowTicket() bool {
+	if family.father.cash+family.mother.cash < 15000 {
 		return false
-	} else {
-		return true
 	}
+	return true
 }
 
-func (family *Family) totalFamilyMoney() float64{
+func (family *Family) totalFamilyMoney() float64 {
 	return family.father.cash + family.mother.cash
 }
 
 func (family *Family) desengage(loverino *Lover) {
-	if loverino.humor == "bad"{
+	if loverino.humor == "bad" {
 		family.engaged = false
 	}
 }
 
-func main(){
+func main() {
 
-	father1 := Father{
+	var father1 Father = Father{
 		"Nick",
 		50,
 		"good",
 		5632.00,
 	}
 
-	mother1 := Mother{
-		"Laura", 
+	var mother1 Mother = Mother{
+		"Laura",
 		45,
 		"bad",
 		9156.80,
 	}
 
-	family1 := Family{
+	var family1 Family = Family{
 		father1,
 		mother1,
 		true,
 	}
 
-	lover1 := Lover{
+	var lover1 Lover = Lover{
 		"good",
 	}
 
-	ticket := family1.canBuyAShowTicket()
-	totalMoney := family1.totalFamilyMoney()
-	
-	nome, _ := nomeEidade()
+	var ticket bool = family1.canBuyAShowTicket()
+	var totalMoney float64 = family1.totalFamilyMoney()
+
+	var nome, _ = nomeEidade()
 
 	fmt.Println("Nome:", nome)
 	fmt.Println("Podemos comprar um ticket? ", ticket)
@@ -84,14 +84,14 @@ func main(){
 	fmt.Println("Lover with good humor, engaged? ", family1.engaged)
 
 	lover1.humor = "bad"
-	
+
 	family1.desengage(&lover1)
-	
+
 	fmt.Println("Lover with bad humor, engaged? ", family1.engaged)
 
 }
 
-func nomeEidade() (string, int){
+func nomeEidade() (string, int) {
 	nome := "Luan"
 	idade := 24
 

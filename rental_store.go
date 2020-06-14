@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main(){
+func main() {
 
 	lista := []string{
 		"Carro",

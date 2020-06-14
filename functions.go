@@ -5,10 +5,10 @@ import (
 	"os"
 )
 
-func main(){
-	
-	nome:= "Luan"
-	versao:= 1.0
+func main() {
+
+	nome := "Luan"
+	versao := 1.0
 
 	imprimeMenu(nome, versao)
 
@@ -18,7 +18,7 @@ func main(){
 
 }
 
-func imprimeMenu(nome string, versao float64){
+func imprimeMenu(nome string, versao float64) {
 	fmt.Println(
 		"Olá, Sr.", nome,
 		"Essa é a versão", versao,
@@ -30,13 +30,13 @@ func imprimeMenu(nome string, versao float64){
 	fmt.Println("0 - Sair")
 }
 
-func recebeValor() int{
+func recebeValor() int {
 	var comando int
 	fmt.Scanf("%d", &comando)
 	return comando
 }
 
-func resultado(comando int){
+func resultado(comando int) {
 	switch comando {
 	case 1:
 		fmt.Println("Iniciando monitoramento...")
@@ -48,20 +48,5 @@ func resultado(comando int){
 	default:
 		fmt.Println("Favor escolher números de 0 a 2")
 		os.Exit(-1)
+	}
 }
-}
-// func main(){
-// 	for {
-// 		fmt.Println("Digite um número maior que 10:")
-
-// 		var numero int
-// 		fmt.Scanf("%d", &numero)
-
-// 		if numero > 10 {
-// 			fmt.Println("parabéns, você digitou um número maior que 10..")
-// 		} else {
-// 			fmt.Println("Atenção, programa sendo fechado")
-// 			break
-// 		}
-// 	}
-// }

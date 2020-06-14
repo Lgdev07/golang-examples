@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func main(){
-	
-	arrayInt := []int{5,6,8,8} 
+func main() {
 
-	for index, value := range arrayInt{
+	arrayInt := []int{5, 6, 8, 8}
+
+	for index, value := range arrayInt {
 		fmt.Println(
 			"index:", index,
 			"value:", value,
@@ -14,14 +14,12 @@ func main(){
 	}
 
 	i := 0
-	for i < 5{
-		fmt.Println("I has:", i)
-		i ++ 
+	for i < 5 {
+		fmt.Println("I have:", i)
+		i++
 	}
 
 	arrayInt = append(arrayInt, 56)
 
-	fmt.Println(arrayInt[4])
+	fmt.Println(arrayInt)
 }
-
-

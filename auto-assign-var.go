@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func main(){
+func main() {
 	nome := "teste"
 	idade := 24
 	saldo := 2.200
